@@ -1,5 +1,4 @@
-Pandoc Droplets and Services
-============================
+# Pandoc Droplets and Services
 
 This is a collection of OS X applets and system services, providing a
 simple way to use [pandoc][] to convert documents between different
@@ -12,8 +11,7 @@ but also rst, textile, html, latex, mediawiki, docbook, opml---to select
 supported output formats---html, pdf, odt, docx, epub, slidy, dzslides,
 and markdown.
 
-Drag and Drop Applets
-=====================
+# Drag and Drop Applets
 
 The applications in the Applets folder are drag-and-drop applets. Put
 them in the Dock or on your desktop. Drag a file (or several files) onto
@@ -23,8 +21,7 @@ folder as the original.
 **Warning**: existing files with the same name and extension will be
 overwritten.
 
-System Services
-===============
+# System Services
 
 The files in the Services folder are [Services for the OS X Services
 Menu][]. To install, double-click and follow the instructions, or just
@@ -36,30 +33,25 @@ folder as the original.
 **Warning**: existing files with the same name and extension will be
 overwritten.
 
-Requirements
-============
+# Requirements
 
-Pandoc
-------
+## Pandoc
 
 You'll need [pandoc][], version 1.9 or later (earlier versions of pandoc have
 different command line options).
 
-LaTeX
------
+## LaTeX
 
 Pandoc depends on LaTeX to convert to PDF. If you don't have LaTeX
 installed, I recommend installing [BasicTeX][], which is only 69 MB.
 
-pdftohtml
----------
+## pdftohtml
 
 Convert PDF files to markdown using the pandoc2markdown.app Applet or the
 'Convert to Markdown using Pandoc' workflow depends on [pdftohtml], which can
 be installed via [homebrew].
 
-Paths
------
+## Paths
 
 Shell scripts that are run via Automator don't know about all the fancy
 additions you've made to your `$PATH` in your `.bashrc`. So each script begins
@@ -73,8 +65,7 @@ PATH=$HOME/.cabal/bin:/usr/local/bin:/Library/TeX/texbin:/usr/texbin
 If you have `pandoc` or `latex` installed somewhere else, you will need to add
 the appropriate path to each script.
 
-Input Formats
-=============
+# Input Formats
 
 The scripts should work with any of the input formats pandoc supports,
 but note that pandoc's support for some input formats is less robust
@@ -85,8 +76,7 @@ The scripts make no attempt to determine the input filetype. They pass
 the input filename to pandoc, and pandoc tries to infer the format from
 the extension.
 
-Hacking Away
-============
+# Hacking Away
 
 Open an Applet or Service with Automator. Edit the embedded script to your
 liking. Here is what a typical script looks like:
@@ -102,9 +92,14 @@ do
 done
 ```
 
-  [pandoc]: http://johnmacfarlane.net/pandoc/
-  [Services for the OS X Services Menu]: https://www.macworld.com/article/1163996/how_to_use_services_in_mac_os_x.html
-  [BasicTeX]: http://www.tug.org/mactex/morepackages.html
-  [pandoc's extended markdown]: http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown
-  [`pdftohtml`]: http://pdftohtml.sourceforge.net/
-  [homebrew]: http://mxcl.github.com/homebrew/
+[pandoc]: http://johnmacfarlane.net/pandoc/
+
+[services for the os x services menu]: https://www.macworld.com/article/1163996/how_to_use_services_in_mac_os_x.html
+
+[basictex]: http://www.tug.org/mactex/morepackages.html
+
+[pandoc's extended markdown]: http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown
+
+[`pdftohtml`]: http://pdftohtml.sourceforge.net/
+
+[homebrew]: http://mxcl.github.com/homebrew/
